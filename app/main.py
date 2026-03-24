@@ -8,8 +8,6 @@ from qdrant_client.http import models as qdrant_models
 from FlagEmbedding import BGEM3FlagModel
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-import transformers.utils.import_utils
-transformers.utils.import_utils.is_torch_available = lambda: True
 
 print("Loading BGE-M3 Embedding Model...")
 # BGE-M3 handles both semantic (dense) and keyword (sparse) search
