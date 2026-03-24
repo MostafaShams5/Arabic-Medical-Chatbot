@@ -1,4 +1,4 @@
-
+import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 def is_torch_fx_available():
@@ -7,8 +7,8 @@ def is_torch_fx_available():
 
 # 3. Force-inject the function directly into the module's core memory
 transformers.utils.import_utils.is_torch_fx_available = is_torch_fx_available
-transformers.utils.is_torch_fx_available = is_torch_fx_availableimport os
-import torch
+transformers.utils.is_torch_fx_available = is_torch_fx_available
+import os
 import uvicorn
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
