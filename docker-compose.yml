@@ -2,6 +2,7 @@ services:
   medical_ai_api:
     build: .
     container_name: qwen_medical_api
+    restart: unless-stopped
     ports:
       - "8000:8000"
     environment:
